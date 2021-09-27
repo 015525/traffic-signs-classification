@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>
+            Traffic Signs Classification
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            body {
+              background-image: url('https://images.unsplash.com/photo-1548224095-db67852c7ee4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: cover;
+            }
+            .container { 
+            height: 150px;
+            position: relative; 
+            }
+
+            .center {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="center">
+                <a href = "/data_samples" class="btn btn-secondary btn-lg active" rule = "button">Show samples from data</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="center">
+                <a href = "/data_preprocess" class="btn btn-primary btn-lg active" rule = "button">Preprocess The Data</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="center">
+                <a href = "/train" class="btn btn-success btn-lg active" rule = "button">Train</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="center">
+                <a href = "/train_plots" class="btn btn-danger btn-lg active" rule = "button">Show the train plots</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="center">
+                <a href = "/conv_mat" class="btn btn-info btn-lg active" rule = "button">Show the confusion matrix</button>
+            </div>
+        </div>
+        <div class="container">
+            <div class="center">
+                <a href = "/predict1" class="btn btn-warning btn-lg active" rule = "button">Predict</button>s
+            </div>
+        </div>
+    </body>
+</html>

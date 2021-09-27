@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title>Python Flask Upload and display image</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <style>
+            body {
+                    background-image: url('https://th.bing.com/th/id/R.be3375091506859b01a1ee07158412c3?rik=wzbyqXVnmfZtxQ&riu=http%3a%2f%2fwww.webtechelp.net%2fwp-content%2fuploads%2f2014%2f05%2fWebsite-Background.jpg&ehk=JlYPhdi2F3uSL2C1zRyU3Uc5m%2b2115EK7ZsYWSC9mH8%3d&risl=&pid=ImgRaw&r=0');
+                    background-repeat: no-repeat;
+                    background-attachment: fixed;
+                    background-size: cover;
+                    }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <div class="row">
+            <h2 style="color:#FFFF00;">Select a file to upload</h2>
+            <p>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul>
+                    {% for message in messages %}
+                    <li>{{ message }}</li>
+                    {% endfor %}
+                    </ul>
+                {% endif %}
+                {% endwith %}
+            </p>
+            {% if filename %}
+                <div>
+                    <img src="{{ url_for('display_image', filename=filename) }}">
+                </div>
+            {% endif %}
+            <form method="post" action="/predict2" enctype="multipart/form-data">
+                <dl>
+                    <p>
+                        <input type="file" name="file" class="form-control" autocomplete="off" required>
+                    </p>
+                </dl>
+                <p>
+                    <input type="submit" value="Submit" class="btn btn-info">
+                </p>
+            </form>
+        </div>
+        </div>
+    </body>
+</html>

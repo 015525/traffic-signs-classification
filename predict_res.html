@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>
+            Traffic Signs Classification
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            body {
+              background-image: url('https://th.bing.com/th/id/R.be3375091506859b01a1ee07158412c3?rik=wzbyqXVnmfZtxQ&riu=http%3a%2f%2fwww.webtechelp.net%2fwp-content%2fuploads%2f2014%2f05%2fWebsite-Background.jpg&ehk=JlYPhdi2F3uSL2C1zRyU3Uc5m%2b2115EK7ZsYWSC9mH8%3d&risl=&pid=ImgRaw&r=0');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: cover;
+            }
+            .container { 
+            height: 220px;
+            position: relative; 
+            }
+
+            .center {
+            margin: 0;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            }
+            
+            img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            }
+            .verticalhorizontal {
+                display: table-cell;
+                height: 300px;
+                text-align: center;
+                width: 300px;
+                vertical-align: middle;
+            }
+                    </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class = "verticalhorizontal">
+                <img  class="center" src = "{{url_for('static', filename='new_image.png')}}" alt  = "predicted image" ></img><br>
+            </div>
+        </div>
+        <div class="container">
+            <div class = "center">
+                <h1 style="color:#FFFF00;">{{text}}</h1>
+            </div>
+        </div>
+    </body>
+</html>
